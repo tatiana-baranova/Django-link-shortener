@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: white;
+    font-weight: 300;
+    font-family: "Monserrat", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    color: #6f6f6f;
+    text-decoration: none;
+    transition: color 500ms ease;
+}
+a:hover{
+    color: #1f1f1f;
+}
+main {
+    flex-grow: 1;
+}
+.container{
+    width: 1258px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+header.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+
+header > nav a {
+    margin-left: 10px;
+    text-align: center;
+}
+
+.courses{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.courses .course{
+    background-color: rgb(12 45 76 / 0.63);
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 280px;
+    color: white;
+}
+
+
+.text-info{
+    width: 160px;
+    position: relative;
+    left: -280px;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav .btn {
+    color: rgb(0 0 0 / 0.75);
+    text-decoration: none;
+    border: none;
+    transition: color 500ms ease;
+    padding: 8px 10px;
+    /*margin: 2px;*/
+    background-color: rgb(116 112 112 / 0.74);
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+nav .btn:hover{
+    color: white;
+}
+.form-section{
+    box-sizing: border-box;
+    background-color: rgb(188 195 204 / 0.67);
+    padding: 40px 30px;
+    box-shadow: 0 2px 4px 0 rgb(5 5 5 / 5%);
+    /*width: 70%;*/
+}
+
+form textarea{
+    display: block;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin: 10px 0;
+    font-size: 14px;
+}
+form label{
+    margin-top: 15px;
+    display: inline-block;
+    font-weight: 600;
+}
+form .helptext{
+    font-size: 13px;
+    display: block;
+    color: #5e5e5e;
+}
+
+form input {
+    font-family: "Monserrat", sans-serif;
+    display: block;
+    width: 300px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid silver;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.form-section button{
+
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(4 10 35 / 0.74);
+    color: rgb(255 255 255 / 0.73);
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+.form-section button:hover{
+    transform: scale(1.2);
+}
+.info-tariffs{
+    margin-bottom: 16px;
+}
+
+.payment-course{
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgb(4 10 35 / 0.74);
+    color: rgb(255 255 255 / 0.73);
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.payment-course:hover{
+    transform: scale(1.2);
+    color: #a5bce1;
+}
+hr{
+    margin: 10px 0;
+}
+.image-profile{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+#id_message{
+    width: 70%;
+}
+.comment{
+    background-color: rgb(160 203 230 / 0.47);
+    border-radius: 5px;
+    width: 50%;
+    margin: 20px;
+     display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+.comment b {
+    font-weight: bold;
+}
+.comment p{
+    margin-bottom: 8px;
+}
+.comment img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.comment-content{
+    .comment-content {
+    flex: 1;
+}
+}
+.comment-title{
+    margin: 16px;
+    font-size: 18px;
+}
+.info-comm{
+    margin: 16px;
+}
+
+footer{
+    flex-shrink: 0;
+    margin-top: 100px;
+    width: 100%;
+    background-color: rgb(81 125 161 / 0.26);
+    padding: 16px;
+    text-align: center;
+}
+
+.errorlist{
+    color: #a50606;
+    list-style: none;
+
+}
