@@ -31,6 +31,7 @@ def profile(request):
 
 
     data = {
-        'update_user_form': update_user_form
+        'update_user_form': update_user_form,
+        'title': 'Профіль користувача',
     }
     return render(request, 'users/profile.html', data)

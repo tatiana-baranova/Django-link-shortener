@@ -26,7 +26,7 @@
             <a href="">Мої посилання</a>
             <a href="{% url 'profile' %}">Профіль</a>
 
-            <form action="{% url 'home' %}" method="post">
+            <form action="{% url 'exit' %}" method="post">
                 {% csrf_token %}
                 <button class="btn" type="submit">Вихід</button>
             </form>
@@ -35,9 +35,6 @@
             <a href="{% url 'reg' %}">Реєстрація</a>
         {% endif %}
     </nav>
-
-
-
 </header>
 
 <main>

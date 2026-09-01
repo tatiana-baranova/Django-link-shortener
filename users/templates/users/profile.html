@@ -1,6 +1,6 @@
 {% extends "shortener/base.html" %}
 
-{% block title%} Профіль користувача {% endblock %}
+{% block title%} {{title}} {% endblock %}
 
 {% block main %} 
     <div class="form-section container">
@@ -18,7 +18,7 @@
         <form method='POST' class="form-register ">
         {% csrf_token %}
         {{update_user_form }}
-        
+
         <button type="submit">Оновити</button>
     </form>
     </div>
