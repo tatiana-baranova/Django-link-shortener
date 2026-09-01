@@ -1,21 +1,27 @@
-{% extends "core/base.html" %}
+{% extends "shortener/base.html" %}
 
 {% block title%} Профіль користувача {% endblock %}
 
-{% block content %} 
-    <div class="w-100 d-flex justify-content-center flex-column align-items-center align-self-start m-2 p-4 dashboard">
-        <h1 class="mb-3 fs-2 text-warning-emphasis">Профіль користувача</h1>
-        <img src="{{user.profile.img.url}}" alt="{{user.username}}">
+{% block main %} 
+    <div class="form-section container">
+        <h2>Профіль користувача</h2>
         <p>
             <span class="username">@{{user.username}}</span><br>
             {{user.email}}
         </p>
-        <form method='POST' enctype="multipart/form-data" class="form-register mt-4">
+        <form action="{% url 'exit' %}" method="POST">
+            {% csrf_token %}
+            <button class="exit" type="submit">Вийти з кабінета</button>
+        </form>
+        <h2>Змінити інформацію про користувача</h2>
+
+        <form method='POST' class="form-register ">
         {% csrf_token %}
-        {{update_user_form.as_p }}
-        {{profile_form.as_p }}
-        <button class="btn btn-warning mt-2" type="submit">Оновити</button>
+        {{update_user_form }}
+        
+        <button type="submit">Оновити</button>
     </form>
     </div>
+    
     
 {% endblock %}

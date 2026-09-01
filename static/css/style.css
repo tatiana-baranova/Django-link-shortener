@@ -153,7 +153,13 @@ form input {
     margin: 10px 0;
     font-size: 14px;
 }
-
+.form-section .exit{
+    display: block;
+    margin: 10px auto;
+}
+.form-section > p{
+    text-align: center;
+}
 .form-section button{
     margin-top: 10px;
     padding: 7px 12px;
