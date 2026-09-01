@@ -45,32 +45,49 @@ header.container{
 
 
 header > nav a {
-    margin-left: 10px;
+    margin-left: 20px;
     text-align: center;
 }
 
-.courses{
+.hero{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
-.courses .course{
-    background-color: rgb(12 45 76 / 0.63);
-    margin: 10px;
-    padding: 20px;
-    box-sizing: border-box;
-    width: 280px;
+
+.hero h1{
+    font-size: 46px;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.hero p{
+    margin-bottom: 20px;
+}
+.hero .btn {
     color: white;
+    text-decoration: none;
+    border: none;
+    padding: 8px 10px;
+    /*margin: 2px;*/
+    background-color: rgb(226 79 13 / 0.99);
+    border-radius: 5px;
+    margin-left: 50px;
+    transition: transform 500ms ease;
 }
 
+.hero .btn:hover{
+    background-color: rgb(178 57 15 / 0.99);
+    transform: scale(1.10);
+}
 
 .text-info{
     width: 160px;
     position: relative;
-    left: -280px;
+    left: -260px;
 }
 
 header nav {
@@ -82,16 +99,19 @@ nav .btn {
     color: rgb(0 0 0 / 0.75);
     text-decoration: none;
     border: none;
-    transition: color 500ms ease;
+    transition: transform 500ms ease;
     padding: 8px 10px;
     /*margin: 2px;*/
     background-color: rgb(116 112 112 / 0.74);
     border-radius: 5px;
     margin-left: 50px;
+
 }
 
 nav .btn:hover{
     color: white;
+    background-color: rgb(226 79 13 / 0.99);
+    transform: scale(1.10);
 }
 .form-section{
     box-sizing: border-box;
@@ -145,75 +165,17 @@ form input {
 .form-section button:hover{
     transform: scale(1.2);
 }
-.info-tariffs{
-    margin-bottom: 16px;
-}
 
-.payment-course{
-    display: inline-block;
-    padding: 7px 12px;
-    border-radius: 5px;
-    border: 0;
-    background-color: rgb(4 10 35 / 0.74);
-    color: rgb(255 255 255 / 0.73);
-    transition: transform 500ms ease;
-    cursor: pointer;
-}
-
-.payment-course:hover{
-    transform: scale(1.2);
-    color: #a5bce1;
-}
-hr{
-    margin: 10px 0;
-}
-.image-profile{
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-}
 #id_message{
     width: 70%;
 }
-.comment{
-    background-color: rgb(160 203 230 / 0.47);
-    border-radius: 5px;
-    width: 50%;
-    margin: 20px;
-     display: flex;
-    gap: 15px;
-    align-items: flex-start;
-}
-.comment b {
-    font-weight: bold;
-}
-.comment p{
-    margin-bottom: 8px;
-}
-.comment img {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-.comment-content{
-    .comment-content {
-    flex: 1;
-}
-}
-.comment-title{
-    margin: 16px;
-    font-size: 18px;
-}
-.info-comm{
-    margin: 16px;
-}
+
 
 footer{
     flex-shrink: 0;
     margin-top: 100px;
     width: 100%;
-    background-color: rgb(81 125 161 / 0.26);
+    background-color: rgb(101 103 103 / 0.26);
     padding: 16px;
     text-align: center;
 }

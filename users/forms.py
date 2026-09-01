@@ -2,6 +2,8 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm 
 from .models import Profile
+
+
 class UserRegisterForm(UserCreationForm):
     email = forms.EmailField(
         label="Вкажіть Email", 
@@ -20,17 +22,16 @@ class UserRegisterForm(UserCreationForm):
         widget=forms.PasswordInput(
             attrs={'class': 'form-control', 'placeholder':'Пароль'})
             )
-    password2 = forms.CharField(
-        label="Підтвердіть пароль", 
-        required=True, 
-        widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder':'Пароль'})
-        )
-    # users = forms.ModelChoiceField(queryset=User.objects.all())
+    # password2 = forms.CharField(
+    #     label="Підтвердіть пароль",
+    #     required=True,
+    #     widget=forms.PasswordInput(attrs={'class': 'form-control', 'placeholder':'Пароль'})
+    #     )
+
 
     class Meta:
         model = User
-        fields = ['username', 'email','password1', 'password2']
-        # fields = UserCreationForm.Meta.fields + ('email',)
+        fields = ['username', 'email','password1']
 
 
 class UserUpdateForm(forms.ModelForm):
@@ -48,24 +49,3 @@ class UserUpdateForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'email']
-
-class ProfileForm(forms.ModelForm):
-
-    gender = forms.ChoiceField(
-        label='Стать',
-        choices=[
-            ('male', 'Чоловіча'),
-            ('female', 'Жіноча'),
-        ],
-        widget=forms.Select(attrs={'class': 'form-control'})
-        )
-
-    email_notifications = forms.BooleanField(
-        label='Я погоджуюсь отримувати поштові повідомлення',
-        required=False
-    )
-
-
-    class Meta:
-        model = Profile
-        fields = [ 'gender', 'email_notifications']
