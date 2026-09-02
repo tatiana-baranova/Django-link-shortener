@@ -4,10 +4,35 @@
 
 <div class="form-section container">
 
-    <h2>Мої посилання</h2>
+    <form method="POST">
+        {% csrf_token %}
 
-    <p>Тут будуть відображатися ваші короткі посилання.</p>
+        {{ form.as_p }}
 
+        <button type="submit">Скоротити</button>
+    </form>
+</div>
+<div class='container block-link'>
+    <h2 class='title-link'>Доступні посилання</h2>
+
+    {% for link in user_links %}
+        <p class='user-link'>
+            Посилання: <a href="{% url 'redirect_link' link.short_url %}" class='link-short' target="_blank" rel="noopener noreferrer">
+        {{ link.short_url }}
+    </a>
+        </p>
+    {% empty %}
+        <p>У вас поки немає створених посилань.</p>
+    {% endfor %}
 </div>
 
+<script>
+    const originalUrl = document.querySelector('#id_original_url');
+    const helpText = originalUrl.parentElement.querySelector('.helptext');
+
+    originalUrl.addEventListener('input', function () {
+        helpText.textContent =
+            `Переконайтеся, що це значення містить не більше 250 символів (зараз ${this.value.length}).`;
+    });
+</script>
 {% endblock %}

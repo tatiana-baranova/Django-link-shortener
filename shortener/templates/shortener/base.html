@@ -16,11 +16,13 @@
 <body>
 
 <header class="container">
-          <img class="logo-img" src="/media/logo.jpg" alt="ShortLink">
-            <p class="text-info">Приберемо все зайве з посилання!</p>
+        <div class='logo-section'>
+            <img class="logo-img" src="/media/logo.jpg" alt="ShortLink">
+                <p class="text-info">Приберемо все зайве з посилання!</p>
+        </div>
         <nav>
         <a href="{% url 'home' %}">Головна</a>
-        <a href="">Про нас</a>
+        <a href="{% url 'about' %}">Про нас</a>
 
         {% if user.is_authenticated %}
             <a href="{% url 'links' %}">Мої посилання</a>

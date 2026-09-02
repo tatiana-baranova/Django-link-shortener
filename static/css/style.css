@@ -16,7 +16,8 @@ body{
 }
 
 a{
-    color: #6f6f6f;
+    color: rgb(226 79 13 / 0.99);
+    font-weight: 600;
     text-decoration: none;
     transition: color 500ms ease;
 }
@@ -41,8 +42,15 @@ header.container{
     width: 80px;
     height: 80px;
     object-fit: cover;
+    /* margin-right: 26px; */
 }
-
+.logo-section{
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    gap: 20px;
+    align-items: center;
+}
 
 header > nav a {
     margin-left: 20px;
@@ -72,10 +80,8 @@ header > nav a {
     text-decoration: none;
     border: none;
     padding: 8px 10px;
-    /*margin: 2px;*/
     background-color: rgb(226 79 13 / 0.99);
     border-radius: 5px;
-    margin-left: 50px;
     transition: transform 500ms ease;
 }
 
@@ -86,8 +92,7 @@ header > nav a {
 
 .text-info{
     width: 160px;
-    position: relative;
-    left: -260px;
+    margin: 0;
 }
 
 header nav {
@@ -101,10 +106,10 @@ nav .btn {
     border: none;
     transition: transform 500ms ease;
     padding: 8px 10px;
-    /*margin: 2px;*/
+    cursor: pointer;
     background-color: rgb(116 112 112 / 0.74);
     border-radius: 5px;
-    margin-left: 50px;
+    margin-left: 20px;
 
 }
 
@@ -120,7 +125,38 @@ nav .btn:hover{
     box-shadow: 0 2px 4px 0 rgb(5 5 5 / 5%);
     width: 450px;
 }
-
+.about-section{
+    box-sizing: border-box;
+    background-color: rgba(224, 201, 181, 0.923);
+    padding: 40px 30px;
+    box-shadow: 0 2px 4px 0 rgb(5 5 5 / 5%);
+    width: 90%;
+}
+.about-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+}
+.about-section h1{
+    margin-left: 30px;
+    margin-bottom: 14px;
+}
+.about-img{
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.about-text h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.about-text p{
+    margin-bottom: 18px;
+    font-size: 22px;
+}
 form textarea{
     display: block;
     width: 300px;
@@ -180,12 +216,24 @@ form input {
     width: 70%;
 }
 
+.title-link{
+    margin-bottom: 20px;
+}
 
+.block-link{
+    text-align: center;
+}
+.block-link .link-short:hover{
+    color: rgb(226 79 13 / 0.99);
+}
+.user-link{
+    margin-bottom: 10px;
+}
 footer{
     flex-shrink: 0;
     margin-top: 100px;
     width: 100%;
-    background-color: rgb(101 103 103 / 0.26);
+    background-color: rgba(160, 139, 121, 0.606);
     padding: 16px;
     text-align: center;
 }

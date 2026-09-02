@@ -1,0 +1,20 @@
+{% extends "shortener/base.html" %}
+
+{% block main %}
+
+<div class="form-section container">
+    
+
+<h1>Посилання не знайдено</h1>
+
+<p>
+    На жаль, такого скороченого посилання не існує.
+</p>
+
+<p>
+    <a href="{% url 'links' %}">
+        Повернутися до моїх посилань
+    </a>
+</p>
+
+</div> {% endblock %}
