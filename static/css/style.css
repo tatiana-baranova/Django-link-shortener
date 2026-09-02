@@ -115,7 +115,7 @@ nav .btn:hover{
 }
 .form-section{
     box-sizing: border-box;
-    background-color: rgb(246 148 62 / 0.27);
+    background-color: rgb(246 148 62 / 0.35);
     padding: 40px 30px;
     box-shadow: 0 2px 4px 0 rgb(5 5 5 / 5%);
     width: 450px;
@@ -189,6 +189,8 @@ footer{
     padding: 16px;
     text-align: center;
 }
+
+
 
 .errorlist{
     color: #a50606;

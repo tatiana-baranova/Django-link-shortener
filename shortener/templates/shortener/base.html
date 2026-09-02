@@ -23,7 +23,7 @@
         <a href="">Про нас</a>
 
         {% if user.is_authenticated %}
-            <a href="">Мої посилання</a>
+            <a href="{% url 'links' %}">Мої посилання</a>
             <a href="{% url 'profile' %}">Профіль</a>
 
             <form action="{% url 'exit' %}" method="post">
